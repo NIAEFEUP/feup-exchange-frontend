@@ -31,17 +31,29 @@
 In a nutshell, you can think about node.js as a server.
 It's sitting somewhere, just waiting for you to make requests to it.
 
-## Installation
+## Inside Docker
+On the root level of the project, build the image by typing:
+```bash
+$ docker build . -t image-frontend
+```
 
-In order to install the packages necessary to run the program it's double check if the `package.json` file is defined. Then, run the following command, it will generate the package-lock files: 
+Run the image by typing:
+```bash
+$ docker run -p 8080:3000 image-frontend
+```
+
+Notice that the local server will be on port 8080, and not on 3000.
+
+## Locally
+
+To install the necessary packages a `package.json` file is defined.  
+Running the following command, will generate the package-lock files: 
 
 ```bash
 $ npm install
 ```
 
-## Usage 
-
-To run the frontend locally, run: 
+Running frontend locally:
 
 ```bash
 $ npm start
