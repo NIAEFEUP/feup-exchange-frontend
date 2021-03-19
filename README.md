@@ -42,11 +42,12 @@ Run the image by typing:
 $ docker run -p 8080:3000 image-frontend
 ```
 
-Notice that the local server will be on 8080 port, and not on 3000.
+Notice that the local server will be on port 8080, and not on 3000.
 
 ## Locally
 
-In order to install the packages necessary to run the program it's double check if the `package.json` file is defined. Then, run the following command, it will generate the package-lock files: 
+To install the necessary packages a `package.json` file is defined.  
+Running the following command, will generate the package-lock files: 
 
 ```bash
 $ npm install

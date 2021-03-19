@@ -6,8 +6,8 @@ WORKDIR /usr/src/app
 # Bundle app source
 COPY feup-exchange/ .
 
-# Generating package-lock
-RUN npm install
+# Production version of npm install
+RUN npm ci --only=production
 
 EXPOSE 8080
 CMD [ "npm", "start" ]
